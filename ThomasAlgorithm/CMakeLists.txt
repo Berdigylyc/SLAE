@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.10)
+project(ThomasAlgorithm)
+include_directories(include)
+add_library(ThomasAlgorithm src/ThomasAlgorithm.cpp)
+add_executable(test_ThomasAlgorithm tests/test_ThomasAlgorithm.cpp)
+add_executable(main src/ThomasAlgorithm.cpp)
+target_link_libraries(test_ThomasAlgorithm ThomasAlgorithm)
+enable_testing()
+add_test(NAME test_ThomasAlgorithm COMMAND test_ThomasAlgorithm)
+
