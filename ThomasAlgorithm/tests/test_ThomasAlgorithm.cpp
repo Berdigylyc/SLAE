@@ -13,7 +13,7 @@ void testThomasAlgorithm() {
     std::vector<double> expected = {0.5, 0, 1.5};
     ThomasAlgorithm(a, b, c, d, y);
 
-    assert(expected == expected);
+    assert(y == expected);
     std::cout << "Test passed!" << std::endl;
 }
 
