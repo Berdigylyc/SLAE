@@ -22,5 +22,4 @@ public:
     void print() const;
 };
 
-// Function to perform QR decomposition using Householder reflections
 void householderQR(const Matrix& A, Matrix& Q, Matrix& R);
