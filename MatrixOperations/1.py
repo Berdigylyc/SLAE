@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Read the CSV file
+
 data = [
     ["100x100", 0.1, 2.571e-05, 3.738e-06],
     ["1000x1000", 0.1, 0.000922758, 0.000113671],
@@ -30,33 +30,27 @@ data = [
   
 ]
 
-# Convert the data to a DataFrame
 df = pd.DataFrame(data, columns=["Size", "Sparsity", "Dense Time (s)", "CSR Time (s)"])
 
-# Plot results
 plt.figure(figsize=(12, 6))
 
-# Plot for each sparsity level
 for sparsity in df['Sparsity'].unique():
     subset = df[df['Sparsity'] == sparsity]
-    
-    # Plot Dense matrix results
+
     plt.plot(subset['Size'], subset['Dense Time (s)'], label=f"Dense (Sparsity={sparsity})", marker='o')
-    
-    # Plot CSR matrix results
+
     plt.plot(subset['Size'], subset['CSR Time (s)'], label=f"CSR (Sparsity={sparsity})", marker='x')
 
-# Labels and title
+
 plt.xlabel("Matrix Size")
 plt.ylabel("Time (seconds)")
 plt.title("Matrix-Vector Multiplication Performance")
 
-# Show legend and grid
+
 plt.legend()
 plt.grid(True)
 
-# Save the plot to a file
 plt.savefig('matrix_performance.jpg')
 
-# Display the plot
+
 plt.show()
