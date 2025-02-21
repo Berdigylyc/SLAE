@@ -22,8 +22,5 @@ public:
     void print() const;
 };
 
-<<<<<<< HEAD
 void householderQR(const Matrix& A, Matrix& Q, Matrix& R);
-=======
-void householderQR(const Matrix& A, Matrix& Q, Matrix& R);
->>>>>>> 8a3ad846ebc43cae3d8c03bc14c59a17265225b0
+
