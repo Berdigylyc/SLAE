@@ -47,8 +47,8 @@ void test_solver() {
     Matrix A = {{4, 1}, {1, 3}};
     Vector b = {1, 2};
     Vector exact = {1.0/11, 7.0/11};  
-    
-    Vector solution = Chebyshev_MSI(A, b, 16, 2.381966, 5.618034, 1e-6);
+    unsigned int large_steps_taken;
+    Vector solution = Chebyshev_MSI(A, b, 16, 2.381966, 5.618034 , large_steps_taken, 1e-6);
     
     assert(std::abs(solution[0] - exact[0]) < 1e-6);
     assert(std::abs(solution[1] - exact[1]) < 1e-6);
