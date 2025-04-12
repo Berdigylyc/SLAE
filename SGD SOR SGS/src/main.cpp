@@ -83,7 +83,7 @@ int main() {
     ofstream datafile("sor_times.csv");
     datafile << "omega,time\n";
 
-    // Test 100 omega values from 0.01 to 1.99
+    
     for (int i = 0; i < 100; ++i) {
         double omega = 0.01 + 0.02 * i;
         
